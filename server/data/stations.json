@@ -1,0 +1,22 @@
+[
+  { "code": "NDLS", "name": "New Delhi", "city": "Delhi" },
+  { "code": "HWH", "name": "Howrah Junction", "city": "Kolkata" },
+  { "code": "CSMT", "name": "Chhatrapati Shivaji Maharaj Terminus", "city": "Mumbai" },
+  { "code": "MAS", "name": "Chennai Central", "city": "Chennai" },
+  { "code": "SBC", "name": "KSR Bengaluru City", "city": "Bengaluru" },
+  { "code": "LKO", "name": "Lucknow Charbagh", "city": "Lucknow" },
+  { "code": "CNB", "name": "Kanpur Central", "city": "Kanpur" },
+  { "code": "PNBE", "name": "Patna Junction", "city": "Patna" },
+  { "code": "BCT", "name": "Mumbai Central", "city": "Mumbai" },
+  { "code": "DLI", "name": "Old Delhi", "city": "Delhi" },
+  { "code": "NZM", "name": "Hazrat Nizamuddin", "city": "Delhi" },
+  { "code": "ALD", "name": "Allahabad Junction (Prayagraj)", "city": "Prayagraj" },
+  { "code": "BSB", "name": "Varanasi Junction", "city": "Varanasi" },
+  { "code": "GKP", "name": "Gorakhpur Junction", "city": "Gorakhpur" },
+  { "code": "ADI", "name": "Ahmedabad Junction", "city": "Ahmedabad" },
+  { "code": "PUNE", "name": "Pune Junction", "city": "Pune" },
+  { "code": "SC", "name": "Secunderabad Junction", "city": "Hyderabad" },
+  { "code": "BPL", "name": "Bhopal Junction", "city": "Bhopal" },
+  { "code": "JP", "name": "Jaipur Junction", "city": "Jaipur" },
+  { "code": "LTT", "name": "Lokmanya Tilak Terminus", "city": "Mumbai" }
+]
