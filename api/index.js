@@ -146,6 +146,8 @@ app.get('/api/trains', async (req, res) => {
   }
 });
 
+import serverless from 'serverless-http';
+
 if (process.env.NODE_ENV !== 'production') {
   app.listen(config.port, () => {
     console.log(`RailTrack API server running on port ${config.port}`);
@@ -153,4 +155,5 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+export const handler = serverless(app);
 export default app;

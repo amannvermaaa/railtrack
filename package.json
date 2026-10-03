@@ -7,6 +7,6 @@
     "dev:server": "cd api && npm run dev",
     "dev:client": "cd client && npm run dev",
     "dev": "npm run dev:server",
-    "build": "cd client && npm install && npm run build"
+    "build": "npm run install:all && cd client && npm run build"
   }
 }
