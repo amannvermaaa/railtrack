@@ -32,10 +32,10 @@ app.get('/api/stations/search', async (req, res) => {
   if (!query) {
     return res.json([]);
   }
-  
+
   try {
     const regex = new RegExp(query, 'i'); // case-insensitive match
-    
+
     // Find stations matching code or name
     const matches = await Station.find({
       $or: [
@@ -43,7 +43,7 @@ app.get('/api/stations/search', async (req, res) => {
         { name: regex }
       ]
     }).limit(15);
-    
+
     res.json(matches);
   } catch (error) {
     console.error('Error fetching stations:', error);
@@ -56,11 +56,11 @@ app.get('/api/train-status', async (req, res) => {
   try {
     const { train_number } = req.query;
     let { date } = req.query;
-    
+
     if (!train_number) {
       return res.status(400).json({ error: "train_number is required" });
     }
-    
+
     if (!date) {
       const today = new Date();
       const year = today.getFullYear();
@@ -68,7 +68,7 @@ app.get('/api/train-status', async (req, res) => {
       const day = String(today.getDate()).padStart(2, '0');
       date = `${year}${month}${day}`;
     }
-    
+
     // Check configuration
     if (!config.railway.rapidApiKey && !config.railway.apiKey) {
       console.log('Returning mock data for live status (No API key)');
@@ -146,11 +146,11 @@ app.get('/api/trains', async (req, res) => {
   }
 });
 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(config.port, () => {
-    console.log(`RailTrack API server running on port ${config.port}`);
-    console.log(`Using Railway Provider: ${config.railway.provider}`);
-  });
-}
+const PORT = process.env.PORT || config.port || 10000;
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`RailTrack API server running on port ${PORT}`);
+  console.log(`Using Railway Provider: ${config.railway.provider}`);
+});
 
 export default app;
