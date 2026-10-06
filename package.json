@@ -9,5 +9,14 @@
     "dev": "npm run dev:server",
     "build": "npm run install:all && cd client && npm run build",
     "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.20.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "mongoose": "^9.11.0",
+    "railkit": "^6.0.0",
+    "serverless-http": "^4.0.0"
   }
 }
