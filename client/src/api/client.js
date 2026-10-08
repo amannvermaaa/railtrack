@@ -3,11 +3,9 @@ import axios from 'axios';
 // During development with Vite, backend is on port 5000. In production on Vercel, it uses the same domain.
 const API_BASE_URL = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
-const apiClient = axios.create({
-  baseURL: API_BASE_URL,
-  timeout: 30000,
-});
-
+const API_BASE_URL = import.meta.env.PROD
+  ? 'https://railtrack-o9l5.onrender.com/api'
+  : 'http://localhost:5000/api';
 export const getLiveTrainStatus = async (trainNumber, date) => {
   const response = await apiClient.get(`/train-status`, {
     params: { train_number: trainNumber, date }
